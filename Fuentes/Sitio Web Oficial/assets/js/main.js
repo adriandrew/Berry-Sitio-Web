@@ -22,11 +22,11 @@
 						enabled: true,
 
 					// Sets the scroll wheel factor. (Ideally) a value between 0 and 1 (lower = slower scroll, higher = faster scroll).
-						factor: 3
+						factor: 4
 
 				},
 
-			// Scroll zones.
+			// Scroll zones.scrollZone
 				scrollZones: {
 
 					// If true, enables scrolling via scroll zones on the left/right edges of the scren.
@@ -44,7 +44,7 @@
 						enabled: true,
 
 					// Sets the momentum factor. Must be a value between 0 and 1 (lower = less momentum, higher = more momentum, 0 = disable momentum scrolling).
-						momentum: 0.875,
+						momentum: 0.9,
 
 					// Sets the drag threshold (in pixels).
 						threshold: 10
