@@ -58,14 +58,13 @@
 	 }
  
 	.logo{
-		position: fixed !important; 
-		width: 35px;
-	    max-width: 35px;
-	    min-width: 35px !important;
-	    height: 35px;
-	    min-height: 35px;
-	    max-height: 35px; 
+		position: fixed !important;
 	    z-index: 2 !important;
+		left: 11rem;
+		width: 35px; 
+	    height: 35px;
+	    text-align: center;
+    	background-color: rgba(255, 255, 255, 0.075);
 	}
 
 	.menu{
@@ -224,7 +223,7 @@
 			height: 100%;
 			z-index: -1;
 			background-attachment: fixed;
-			background-color: #0c0101; /* #0c0101; Rojo* / /* #016658; Azul */ /* #e1e6e1; Casi blanco*/
+			background-color: white; /* #0c0101; Rojo* / /* #016658; Azul */ /* #e1e6e1; Casi blanco*/
 			background-image: url("../../images/overlay.png"); 
 			background-repeat: repeat, repeat-x;
 			background-size: 128px 128px, cover;
@@ -3543,7 +3542,7 @@
 		-ms-flex-shrink: 1;
 		flex-shrink: 1;
 		height: 100%;
-		padding: 5rem;
+		padding: 0;
 	}
 
 		@media screen and (orientation: portrait) {
@@ -3609,13 +3608,13 @@
 		transition-delay: 0.25s;
 		cursor: default;
 		position: relative;
-		height: 40rem;
+		height: 100%;
 		box-shadow: 0 2rem 4rem 0.25rem rgba(46, 43, 55, 0.575);
 	}
 
 		#wrapper > .scrollZone {
 			position: fixed;
-			width: 6rem;
+			width: 10rem;
 			height: inherit;
 			cursor: -moz-grab;
 			cursor: -webkit-grab;
