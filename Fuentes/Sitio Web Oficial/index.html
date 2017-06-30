@@ -2,14 +2,23 @@
 <html lang="es">
 	<head>
 		<meta charset="utf-8">
-		<title>Berry Desarrollo de Software a la medida en Hermosillo, Sonora, México.</title>
+		<title>Software Berry - Desarrollo de Software a la medida en Hermosillo, Sonora, México.</title>
 		<meta name="description" content="Desarrollo de Software en Hermosillo, Sonora. Desarrollamos software a la medida orientado a web y contamos con un sistema ERP orientado a agrícolas.">
 		<meta name="keywords" content="Software, Berry, Sitios Web, ERP, Agrícola, Hermosillo, Sonora">
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 		<link rel="stylesheet" href="assets/css/main.css">
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css"></noscript>
 		<link rel="icon" href="images/logo.ico" type="image/ico">
-
+		<link rel="images/header.jpg" type="image/jpeg" href="http://www.softwareberry.mipropia.com/images/header.jpg">
+		<!-- Meta tags facebook. -->
+		<meta property="og:title" content="Software Berry - Desarrollo de Software en Hermosillo Sonora México">
+		<meta property="og:type" content="website">
+		<meta property="og:image" content="http://www.softwareberry.mipropia.com/images/header.jpg">
+		<meta property="og:url" content="http://www.softwareberry.mipropia.com/">
+		<meta property="og:description" content="Desarrollo de Software en Hermosillo, Sonora. Desarrollamos software a la medida orientado a web y contamos con un sistema ERP orientado a agrícolas.">
+		<meta property="og:locale" content="es_MX">
+		<meta property="og:site_name" content="Berry">
+		<meta property="fb:admins" content="@SoftwareBerry"/> 
 		<!-- Smart lock  
 		<script type="text/javascript">
 		    window.smartlook||(function(d) {
@@ -18,7 +27,33 @@
 		    c.charset='utf-8';c.src='https://rec.smartlook.com/recorder.js';h.appendChild(c);
 		    })(document);
 		    smartlook('init', '09bb59a143ed3050ea050437ed8d138d1ee24c2f');
-		</script> -->
+		</script> --> 
+		<!-- Google Analytics --> 
+		  	<script async src='https://www.google-analytics.com/analytics.js'></script>
+			<script>
+			  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga'); 
+			  ga('create', 'UA-66604551-1', 'auto');
+			  ga('send', 'pageview'); 
+			</script> 
+		<!-- Mostrar y Ocultar --> 
+			<script>  
+				function MuestraOculta ( id )
+				{
+				    // Se obtiene el id.
+				     if ( document.getElementById ) {
+				         // Se define la variable "comentarioUsuarios" igual a nuestro div.
+				        var comentarioUsuario = document.getElementById ( id ); 
+				        // Si la variable comentarioUsuario no viene nula o indefinida se aplica la propiedad.
+				        if ( typeof comentarioUsuario !== 'undefined' && comentarioUsuario !== null ) {
+				            // Damos un atributo display:none que oculta el div.
+				            comentarioUsuario.style.display = ( comentarioUsuario.style.display == 'none' || comentarioUsuario.style.display == '' ) ? 'block' : 'none'; 
+				        }
+				    }
+				}
+			</script>
 	</head>
 	<body>
 
@@ -33,21 +68,22 @@
 							<a id="imagenLogo" href="#"><img src="images/logo.ico" alt="Logo" /></a>
 						</div>
  
-						<!-- Panel 
-							<section class="panel"> 
-								<div class="color3-alt" data-position="center">
-									<img src="images/pc.png" alt="" />
-								</div>
-							</section> -->
+						<!-- Panel de Header para celular. -->
+							<section class="panel span-0-5" id="controlMenu">
+								<div id="controlMenuIcono" class="icon fa fa-bars fa-3x" onclick="MuestraOculta('idMenu')">&nbsp;Menú</div>
+								<div id="controlMenuHeader2"></div> 
+							</section>
 
 						<!-- Panel (Spotlight) Acerca de Berry. --> 
 							<section class="panel spotlight large right divisionMenu">
-								<div class="inner columns divided chico">
+								<div class="inner columns divided chico principal">
+								<!-- Principal 
+									<div class="principal"></div>  -->
 								<!-- Relleno -->
 									<div class="span-4"></div>
 								<!-- Menu -->
-									<menu class="span-1-5">
-										<ul class="contact-icons actions color3-alt menu"> 
+									<menu class="span-1-5" id="idMenu">
+										<ul class="contact-icons actions menu"> 
 											<li class="icon fa-check fondoMenu"><a href="#acercaDe">Quienes somos?</a></li>
 											<li class="icon fa-folder-open fondoMenu"><a href="#producto1">Proyectos Web&nbsp;&nbsp;&nbsp;</a></li>
 											<li class="icon fa-folder-open fondoMenu"><a href="#producto2">Proyecto ERP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
@@ -60,16 +96,12 @@
 										<i class="fa fa-smile-o fa-3x"></i>
 										<h2 class="inline">&nbsp;Hola somos</h2>
 										<h1 class="major">B e r r y !</h1>
-										<p>Quieres <b>mejorar?</b> Únete ya!. Tenemos las <b>soluciones de software</b> para tu empresa ;)</p>
-										<!-- 
-										<br/>
-										<blockquote>Nota: Sitio en construcción... No te desesperes ;)</blockquote> 
-										-->
+										<p>Quieres <b>mejorar?</b> Únete ya!. Tenemos las <b>soluciones de software</b> para tu empresa ;)</p> 
 									</div>
 								</div>  
-								<div class="image" data-position="top left">
+								<!--  <div class="image principal" data-position="top left">
 									<img src="images/header.jpg" alt="" />
-								</div> 
+								</div> -->
 							</section>
 
 						<!-- Panel Acerca de Berry. -->
@@ -90,11 +122,13 @@
 							<section class="panel color2">
 								<div class="inner columns divided">
 									<div class="span-1-25" id="producto1">
+										<i class="fa fa-desktop fa-2x block redondo iconosGrandes iconoCompu"></i>
 										<i class="fa fa-folder-open fa-2x"></i>
 										<h2 class="inline major">&nbsp;Te ofrecemos Desarrollo Web!</h2>
 										<p class="espacioTitulo">Sabemos de la prioridad de contar con un sitio web. Berry te ofrece su <b>excelencia</b> en este ramo. Si quieres estar <b>actualizado</b> y darte a conocer, no lo pienses mas!</p>
 									</div>
 									<div class="span-2"> 
+										<i class="fa fa-child fa-5x block redondo iconosGrandes"></i>
 										<i class="fa fa-star fa-2x"></i>
 										<h3 class="inline">&nbsp;Beneficios y Ventajas</h3>
 										<ul>
@@ -116,6 +150,7 @@
 										</ul> 
 									</div>
 									<div class="span-2">
+										<div class="image" id="mini"></div>
 										<i class="fa fa-bookmark fa-2x"></i>
 										<h3 class="inline">&nbsp;Paquete Mini: <br/><code class="fa fa-close colorRojo"><del>$  9 9 9</del></code><code class="fa fa-check colorVerde">$  9 4 9</code></h3><br/><br/>
 										<ul class="alt">
@@ -133,6 +168,7 @@
 										</ul> 
 									</div> 
 									<div class="span-2"> 
+										<div class="image" id="chico"></div>
 										<i class="fa fa-bookmark fa-2x"></i>
 										<h3 class="inline">&nbsp;Paquete Pequeño: <br/><code class="fa fa-close colorRojo"><del>$  4 , 9 9 9</del></code><code class="fa fa-check colorVerde">$  2 , 4 9 9</code></h3><br/><br/>
 										<ul class="alt">
@@ -146,6 +182,7 @@
 										</ul> 
 									</div>
 									<div class="span-2"> 
+										<div class="image" id="mediano"></div>
 										<i class="fa fa-bookmark fa-2x"></i>
 										<h3 class="inline">&nbsp;Paquete Mediano: <br/><code class="fa fa-close colorRojo"><del>$  7 , 9 9 9</del></code><code class="fa fa-check colorVerde">$  3 , 9 9 9</code></h3><br/><br/> 
 										<ul class="alt">
@@ -161,6 +198,7 @@
 										</ul> 
 									</div>
 									<div class="span-2"> 
+										<div class="image" id="grande"></div>
 										<i class="fa fa-bookmark fa-2x"></i>
 										<h3 class="inline">&nbsp;Paquete Grande: <br/><code class="fa fa-close colorRojo"><del>$  1 0 , 9 9 9</del></code><code class="fa fa-check colorVerde">$  5 , 4 9 9</code></h3><br/><br/>
 										<ul class="alt">
@@ -176,7 +214,8 @@
 											<li>Tiempo de entrega: 12 a 15 días hábiles.</li>
 										</ul> 
 									</div> 
-									<div class="span-4"> 
+									<div class="span-4"> 										
+										<i class="fa fa-question fa-5x block redondo iconosGrandes"></i>
 										<i class="fa fa-hand-o-up fa-2x"></i>
 										<h2 class="inline major">&nbsp;Dudas</h2> 
 										<p class="espacioTitulo"><b>¿Por qué necesito un sitio web?</b><br/>  
@@ -195,11 +234,12 @@
 							<section class="panel color1">
 								<div class="inner columns divided">
 									<div class="content span-1-25" id="producto2">
+										<i class="fa fa-desktop fa-5x block redondo iconosGrandes iconoCompu"></i>
 										<i class="fa fa-folder-open fa-2x"></i>
 										<h2 class="inline major">&nbsp;Te ofrecemos un Sistema ERP!</h2>
 										<p class="espacioTitulo">Si necesitas <b>controlar</b> tus procesos empresariales, te ofrecemos un sistema prefabricado modularizado, escoge lo que necesites y nosotros nos encargamos que sea <b>perfecto</b> para ti!</p>
 									</div>  
-									<div class="span-2-25"> 
+									<div class="span-2-25"> 										<i class="fa fa-child fa-5x block redondo iconosGrandes"></i>
 										<i class="fa fa-star fa-2x"></i>
 										<h3 class="inline">&nbsp;Beneficios y Ventajas</h3>
 										<ul>
@@ -220,6 +260,7 @@
 										</ul> 
 									</div>
 									<div class="span-2-5"> 
+										<div class="image" id="inventarios"></div>
 										<i class="fa fa-bookmark fa-2x"></i>
 										<h3 class="inline">&nbsp;Control de Inventarios: <br/><code class="fa fa-close colorRojo"><del>$  2 9 , 9 9 9</del></code><code class="fa fa-check colorVerde">$  9 , 9 9 9</code></h3><br/><br/>
 										<ul class="alt">
@@ -233,11 +274,12 @@
 										</ul> 
 									</div> 
 									<div class="span-2-5"> 
+										<div class="image" id="actividades"></div>
 										<i class="fa fa-bookmark fa-2x"></i>
 										<h3 class="inline">&nbsp;Control de Actividades: <br/><code class="fa fa-close colorRojo"><del>$  2 9 , 9 9 9</del></code><code class="fa fa-check colorVerde">$  9 , 9 9 9</code></h3><br/><br/>
 										<ul class="alt">
 											<li>Manejo de múltiples empresas.</li>
-											<li>Catálogos de usuarios, areas, correos, horarios, etc.</li>
+											<li>Catálogos de usuarios, áreas, correos, horarios, etc.</li>
 											<li>Control de autorizaciones y evidencias.</li>
 											<li>Configuración de correo para enviar actividades.</li>
 											<li>Captura y resolución de actividades.</li>
@@ -246,7 +288,7 @@
 											<li>Notificaciones de actividades por correo.</li>
 										</ul> 
 									</div>
-									<div class="span-5-25"> 
+									<div class="span-5-25"> 										<i class="fa fa-question fa-5x block redondo iconosGrandes"></i>
 										<i class="fa fa-hand-o-up fa-2x"></i>
 										<h2 class="inline major">&nbsp;Dudas</h2>  
 										<p class="espacioTitulo"><b>¿Por qué necesito un sistema ERP?</b><br/>  
@@ -264,6 +306,7 @@
 						<!-- Panel Tipos de Contratos. -->
 							<section class="panel color3">
 								<div class="intro span-2-5" id="tiposContratos">
+									<i class="fa fa-dollar fa-5x block redondo iconosGrandes"></i>
 									<div>
 										<i class="fa fa-money fa-2x"></i>
 										<h2 class="inline major">&nbsp;Tipos de Contratos</h2>
@@ -282,6 +325,7 @@
 							<section class="panel color4-alt">
 								<div class="inner columns divided">
 									<div class="span-5" id="clientes">
+										<i class="fa fa-hand-o-right fa-4x block redondo iconosGrandes"></i>	
 										<i class="fa fa-handshake-o fa-2x"></i>
 										<h2 class="inline major">&nbsp;Clientes</h2>
 										<h3 class="espacioTitulo">Muchas gracias por confiar.</h3>
@@ -330,10 +374,11 @@
 							<section class="panel color2-alt"> 
 								<div class="inner columns divided">
 									<div class="contact-icons span-1-75" id="contacto"> 
+										<i class="fa fa-book fa-5x block redondo iconosGrandes"></i>
 										<i class="fa fa-group fa-2x"></i>
 										<h2 class="inline major">&nbsp;Contáctanos</h2>
 										<ul class="contact-icons color3-alt espacioTitulo"> 
-											<li class="icon fa-home">Hermosillo, Sonora.</li>		
+											<li class="icon fa-home">Hermosillo, Sonora.</li>
 											<li class="icon fa-phone">6221310757</li>
 											<li class="icon fa-phone">6221226900</li>
 											<li class="icon fa-envelope">informacionberry@gmail.com</li>
@@ -354,6 +399,7 @@
 							<section class="panel">
 								<div class="intro color3-alt span-2-25">
 									<div>
+										<i class="fa fa-commenting fa-5x block redondo iconosGrandes"></i>
 										<i class="fa fa-comments fa-2x"></i>
 										<h2 class="inline major">&nbsp;Y recuerda</h2>
 										<blockquote class="espacioTitulo">"Donde hay una empresa de éxito, alguien tomó alguna vez una <b>decisión valiente!"</b></blockquote>
@@ -392,7 +438,7 @@
  
 			<!-- Clicky -->
 			<a style="display:none;" title="Real Time Analytics" href="http://clicky.com/101051925"><img style="display:none;" alt="Real Time Analytics" src="//static.getclicky.com/media/links/badge.gif" border="0" /></a>
-			<script type="text/javascript">
+			<script async type="text/javascript">
 			var clicky_site_ids = clicky_site_ids || [];
 			clicky_site_ids.push(101051925);
 			(function() {
@@ -405,15 +451,5 @@
 			</script>
 			<noscript><p style="display:none;"><img style="display:none;" alt="Clicky" width="1" height="1" src="//in.getclicky.com/101051925ns.gif" /></p></noscript> 
 
-		<!-- Google Analytics --> 
-		  	<script async src='https://www.google-analytics.com/analytics.js'></script>
-			<script>
-			  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga'); 
-			  ga('create', 'UA-66604551-1', 'auto');
-			  ga('send', 'pageview'); 
-			</script> 
 	</body>
 </html>
